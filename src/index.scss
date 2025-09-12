@@ -114,6 +114,16 @@ p {
   animation: pulse 1s ease-in-out infinite;
 }
 
+/* Page */
+
+.page {
+  @apply min-h-screen min-w-full p-8 bg-gray-50;
+}
+
+.projector-page {
+  @apply h-screen w-screen p-8 bg-gray-50;
+}
+
 /* Custom Animations */
 @keyframes bounce {
   0%,
