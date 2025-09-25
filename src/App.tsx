@@ -3,6 +3,7 @@ import ColorSystem from "./features/DevTools/ColorSystem";
 import Button from "./components/Button";
 import Setup from "./features/Setup/Setup";
 import GamePreview from "./features/GamePreview/GamePreview";
+import GameApp from "./features/GameApp/GameApp";
 
 // Context imports
 import { useCurrentPage } from "./contexts/CurrentPage/useCurrentPage";
@@ -17,6 +18,7 @@ const App = () => {
     if (currentPage === Page.Setup) return <Setup />;
     else if (currentPage === Page.ColorSystem) return <ColorSystem />;
     else if (currentPage === Page.GamePreview) return <GamePreview />;
+    else if (currentPage === Page.GameApp) return <GameApp />;
 
     return <Setup />;
   };

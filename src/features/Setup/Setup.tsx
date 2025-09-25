@@ -15,6 +15,7 @@ import CategoryExample from "./components/CategoryExample";
 import TipItem from "./components/TipItem";
 import TipsList from "./components/TipsList";
 import { BulletTipItem } from "./components/TipItem";
+import TimeInput from "./components/TimeInput";
 
 const Setup = () => {
   const { setCurrentPage } = useCurrentPage();
@@ -24,7 +25,7 @@ const Setup = () => {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header Section */}
         <Section className="text-center space-y-6">
-          <h2 className="font-heading">Category Storm! Teacher Setup Guide</h2>
+          <h4 className="font-heading">Category Storm! Teacher Setup Guide</h4>
         </Section>
 
         {/* Game Description */}
@@ -63,9 +64,9 @@ const Setup = () => {
         {/* How to Play Section */}
         <div className="grid md:grid-cols-2 gap-8">
           <Section>
-            <h2 className="font-subheading text-4xl text-accent-600">
+            <h4 className="font-subheading text-4xl text-accent-600">
               How to Play
-            </h2>
+            </h4>
             <div className="space-y-4">
               <HowToPlayStep
                 stepNumber={1}
@@ -97,9 +98,9 @@ const Setup = () => {
 
           {/* Educational Benefits */}
           <Section>
-            <h2 className="font-subheading text-4xl text-accent-600">
+            <h4 className="font-subheading text-4xl text-accent-600">
               Why It's Great for Learning
-            </h2>
+            </h4>
             <div className="space-y-4">
               <EducationalBenefit
                 title="Builds Vocabulary"
@@ -127,9 +128,9 @@ const Setup = () => {
 
         {/* Teacher Tips */}
         <Section variant="bordered">
-          <h2 className="font-subheading text-4xl text-primary-600 text-center mb-8">
+          <h4 className="font-subheading text-4xl text-primary-600 text-center mb-8">
             Teacher Tips
-          </h2>
+          </h4>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-3">
               <TipItem icon="⏱️" text="Keep rounds short (30-60 seconds)" />
@@ -152,9 +153,9 @@ const Setup = () => {
 
         {/* Classroom Management Tips */}
         <Section variant="bordered">
-          <h2 className="font-subheading text-3xl text-primary-600 text-center mb-6">
+          <h4 className="font-subheading text-3xl text-primary-600 text-center mb-6">
             Classroom Management Tips
-          </h2>
+          </h4>
           <div className="grid md:grid-cols-2 gap-6">
             <TipsList title="Before Starting:" variant="accent">
               <BulletTipItem
@@ -195,12 +196,27 @@ const Setup = () => {
           </div>
         </Section>
 
+        {/* Game Setup Section */}
+        <Section variant="bordered">
+          <h4 className="font-subheading text-4xl text-primary-600 text-center mb-8">
+            Game Setup
+          </h4>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex flex-row justify-around items-center">
+              <label className="font-subheading text-lg text-primary-600 font-bold">
+                Game Time
+              </label>
+              <TimeInput />
+            </div>
+          </div>
+        </Section>
+
         {/* Start Button for Teachers */}
         <Section variant="centered">
           <div className="space-y-6">
-            <h2 className="font-subheading text-3xl text-gray-700">
+            <h4 className="font-subheading text-3xl text-gray-700">
               Ready to project the game onto the board?
-            </h2>
+            </h4>
             <Button
               variant="primary"
               size="lg"
