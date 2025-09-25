@@ -58,7 +58,7 @@ const TimeInput = () => {
           />
         </div>
       </div>
-      {error && <p className="text-sm text-red-600">Time can't be 0:00</p>}
+      {error && <p className="text-xs text-red-600">Time can't be 0:00</p>}
     </div>
   );
 };

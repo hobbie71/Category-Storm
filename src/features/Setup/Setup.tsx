@@ -16,6 +16,7 @@ import TipsList from "./components/TipsList";
 import { BulletTipItem } from "./components/TipItem";
 import TimeInput from "./components/TimeInput";
 import Button from "../../components/Button";
+import CategoryInput from "./components/CategoryInput";
 
 const Setup = () => {
   const { setCurrentPage } = useCurrentPage();
@@ -221,16 +222,26 @@ const Setup = () => {
         )}
 
         {/* Game Setup Section */}
-        <Section variant="bordered">
+        <Section variant="bordered" className="items-center">
           <h4 className="font-subheading text-4xl text-primary-600 text-center mb-8">
             Game Setup
           </h4>
+
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex flex-row justify-around items-center">
+            {/* Game Time Input */}
+            <div className="flex flex-row items-center space-x-4">
               <label className="font-subheading text-lg text-primary-600 font-bold">
                 Game Time
               </label>
               <TimeInput />
+            </div>
+
+            {/* Category Input */}
+            <div className="flex flex-row items-center space-x-4">
+              <label className="font-subheading text-lg text-primary-600 font-bold">
+                Catorgies
+              </label>
+              <CategoryInput />
             </div>
           </div>
         </Section>
@@ -241,6 +252,7 @@ const Setup = () => {
             <h4 className="font-subheading text-3xl text-gray-700">
               Ready to project the game onto the board?
             </h4>
+
             <Button
               variant="primary"
               size="lg"
@@ -248,6 +260,7 @@ const Setup = () => {
               className="text-2xl px-12 py-6 font-heading shadow-2xl transform hover:scale-105 transition-transform duration-200">
               📺 Project Game Preview
             </Button>
+
             <p className="text-gray-500 text-lg">
               Drag or cast this app to the projector and make it full screen
               after pressing this button
